@@ -11,3 +11,5 @@ def test_valid_login(page):
     login.login (INVALID_PASSWORD ["username"],INVALID_PASSWORD["password"])
     
     assert login.get_invalid_message() == "Invalid credentials"
+
+    login.take_screenshot("login_wrong_password_error")

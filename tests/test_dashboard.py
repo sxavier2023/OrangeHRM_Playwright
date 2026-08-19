@@ -16,6 +16,8 @@ def test_dashboard_displayed(page):
         VALID_LOGIN["password"]
     )
     dashboard.dashboard_is_displayed()
+
+    dashboard.take_screenshot("dashboard_main_view")
     
 
 

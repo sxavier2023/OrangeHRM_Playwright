@@ -43,3 +43,7 @@ def test_add_admin_user(page):
 
     # 8. Save
     admin.click_save()
+    admin.wait(2)
+
+    # 9. Screenshot of the created user
+    admin.take_screenshot("admin_user_saved")

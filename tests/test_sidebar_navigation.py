@@ -38,3 +38,5 @@ def test_dashboard_displayed(page):
         if menu == navigation.MAINTENANCE:
             maintenance.verify_admin_password(VALID_LOGIN["password"])
         navigation.wait(3)
+        menu_name = menu.split(":text-is('")[-1].rstrip("')")
+        navigation.take_screenshot(f"nav_{menu_name}")

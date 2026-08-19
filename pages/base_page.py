@@ -1,3 +1,8 @@
+import os
+
+from config import SCREENSHOT_DIR
+
+
 class BasePage:
 
     def __init__(self, page):
@@ -26,3 +31,9 @@ class BasePage:
 
     def wait(self, seconds):
         self.page.wait_for_timeout(seconds * 1000)
+
+    def take_screenshot(self, name):
+        path = os.path.join(SCREENSHOT_DIR, f"{name}.png")
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        self.page.screenshot(path=path)
+        return path

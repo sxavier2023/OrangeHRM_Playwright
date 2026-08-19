@@ -11,3 +11,5 @@ def test_valid_login(page):
     login.login (EMPTY_USERNAME ["username"],EMPTY_USERNAME["password"])
     
     assert login.get_required_message() == "Required"
+
+    login.take_screenshot("login_wrong_name_required_error")

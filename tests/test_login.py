@@ -10,4 +10,6 @@ def test_valid_login(page):
     login.login(VALID_LOGIN["username"],VALID_LOGIN["password"])
     
     assert dashboard.dashboard_is_displayed()
+
+    dashboard.take_screenshot("login_valid_dashboard")
     

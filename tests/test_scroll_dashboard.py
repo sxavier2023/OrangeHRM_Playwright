@@ -29,3 +29,6 @@ def test_dashboard_displayed(page):
 
     for widget in widgets:
         assert dashboard.widget_visible(widget)
+
+    dashboard.scroll_to(dashboard.EMPLOYEE_LOCATION)
+    dashboard.take_screenshot("dashboard_scrolled_widgets")
