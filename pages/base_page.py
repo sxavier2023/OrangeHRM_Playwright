@@ -3,8 +3,8 @@ class BasePage:
     def __init__(self, page):
         self.page = page
 
-    def click(self, selector):
-        self.page.locator(selector).click()
+    def click(self, selector, no_wait_after=False):
+        self.page.locator(selector).click(no_wait_after=no_wait_after)
 
     def fill(self, selector, text):
         self.page.locator(selector).fill(text)
