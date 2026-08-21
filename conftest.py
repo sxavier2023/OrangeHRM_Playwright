@@ -6,11 +6,16 @@ from playwright.sync_api import sync_playwright
 
 from config import SCREENSHOT_DIR
 
+HEADLESS = (
+    os.getenv("PLAYWRIGHT_HEADLESS", "false").lower() == "true"
+    or os.getenv("GITHUB_ACTIONS") == "true"
+)
+
 
 @pytest.fixture
 def page():
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False)
+        browser = p.chromium.launch(headless=HEADLESS)
         page = browser.new_page()
         yield page
         browser.close()

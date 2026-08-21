@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.5 on win32)" generated="2026-08-21T09:46:24.403628" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Test" source="D:\SDET_Folio\OrangeHRM_robot\login_test.robot">
+<test id="s1-t1" name="Verify OrangeHRM Login Page" line="5">
+<kw name="New Browser" owner="Browser">
+<msg time="2026-08-21T09:46:24.617527" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "D:\\SDET_Folio\\OrangeHRM_robot\\browser\\traces\\temp\\8140f575-5d89-4d9e-be83-3aa9c5818453"}</msg>
+<msg time="2026-08-21T09:46:24.640889" level="INFO">Starting Browser process C:\Python314\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:62707</msg>
+<msg time="2026-08-21T09:46:32.260537" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"D:\\SDET_Folio\\OrangeHRM_robot\\browser\\traces\\temp\\8140f575-5d89-4d9e-be83-3aa9c5818453"}</msg>
+<arg>chromium</arg>
+<arg>headless=false</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2026-08-21T09:46:24.615009" elapsed="7.646382"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2026-08-21T09:46:35.802156" level="INFO">Successfully initialized new page object and opened url: https://opensource-demo.orangehrmlive.com/</msg>
+<msg time="2026-08-21T09:46:35.802266" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>https://opensource-demo.orangehrmlive.com/</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2026-08-21T09:46:32.262671" elapsed="3.541309"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2026-08-21T09:46:36.181058" level="INFO">Text: ['Login']</msg>
+<arg>h5</arg>
+<arg>==</arg>
+<arg>Login</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2026-08-21T09:46:35.804469" elapsed="0.376701"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<msg time="2026-08-21T09:46:36.400528" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-08-21T09:46:36.181537" elapsed="0.219140"/>
+</kw>
+<status status="PASS" start="2026-08-21T09:46:24.614233" elapsed="11.786749"/>
+</test>
+<status status="PASS" start="2026-08-21T09:46:24.404884" elapsed="12.002370"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login Test" id="s1" pass="1" fail="0" skip="0">Login Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
